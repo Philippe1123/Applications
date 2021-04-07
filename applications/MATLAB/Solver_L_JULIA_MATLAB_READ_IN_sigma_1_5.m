@@ -1,9 +1,8 @@
 
-function [] = Solver_L_JULIA_MATLAB_READ_IN(ProcID)
-%UNTITLED2 Summary of this function goes here
+function [] = Solver_L_JULIA_MATLAB_READ_IN_sigma_1_5(ProcID)
 %   Detailed explanation goes here
 %ProcID=2
-%NumberOfGaussPoints=[9 25 49 81]; % paper 
+%NumberOfGaussPoints=[9 25 49 81]; % paper
 NumberOfGaussPoints=[25    81   121   225   289   441   625   729];
 str_folder="/home/philippe/.julia/dev/Applications/applications/SPDE/data/";
 str_folder="/home/philippeb/.julia/packages/MultilevelEstimators/l8j9n/applications/SPDE/data/";
@@ -56,7 +55,7 @@ if(length(level)==1)
         nElem=size(Elements,1);
     elseif(HigherOrder==1) %Pure p refinement
         EltOpts.GP='1';
-
+        
         Order=level_num+1;
         str_elements=str_folder+"Mesh/Beam/p_refinement/";
         
@@ -93,7 +92,9 @@ fileE=strcat(str_interm,"E",level,"_",num2str(ProcID));
 E=dlmread(fileE);
 file_nodes=strcat(str_elements,"Nodes_L",level,".txt");
 
-
+% file_sort=strcat(str_elements,"SortVec_L",level,".txt");
+% srt=dlmread(file_sort);
+% E=E(srt);
 
 switch Order
     case 1
@@ -135,32 +136,32 @@ end
 
 EltOpts.nl='linear';
 EltOpts.bendingmodes=false;
-Types = {1 elementPlane EltOpts};   % {EltTypID EltName EltOpts} 
-Sections = [1 t];               % [SecID t] 
+Types = {1 elementPlane EltOpts};   % {EltTypID EltName EltOpts}
+Sections = [1 t];               % [SecID t]
 
-    Options=struct;
-    Options.verbose=false;
+Options=struct;
+Options.verbose=false;
 
 %% Mesh
 % Line1 = [0 0 0; Lx 0 0];
 % Line2 = [Lx 0 0; Lx Ly 0];
 % Line3 = [Lx Ly 0; 0 Ly 0];
 % Line4 = [0 Ly 0; 0 0 0];
-% 
+%
 % [Nodes,Elements,Edge1,Edge2,Edge3,Edge4,Normals] = makemesh(Line1,Line2,Line3,Line4,m,n,Types(1,:),1,1);
 % Nodes(:,4) = 0;
 if(HigherOrder==0)
     Nodes=dlmread(file_nodes);
     file_nodes_centers=strcat(str_elements,"ElementsCenter_L",level,".txt");
     nodes_centers=dlmread(file_nodes_centers);
-   % Ek=griddata(Nodes(:,2),Nodes(:,3),E,nodes_centers(:,1),nodes_centers(:,2),'cubic');  % Cohesion in N/m^2
-   F=scatteredInterpolant(Nodes(:,2),Nodes(:,3),E);
-   Ek=F(nodes_centers(:,1),nodes_centers(:,2));
-%   Ek=E;
+    % Ek=griddata(Nodes(:,2),Nodes(:,3),E,nodes_centers(:,1),nodes_centers(:,2),'cubic');  % Cohesion in N/m^2
+    F=scatteredInterpolant(Nodes(:,2),Nodes(:,3),E);
+    Ek=F(nodes_centers(:,1),nodes_centers(:,2));
+    %   Ek=E;
 else
     %  c=reshape(c,nElem,NumberOfGaussPoints(Order));
     Ek=transpose(reshape(E,NumberOfGaussPoints(Order),nElem));
-   % Ek=ones(nElem,NumberOfGaussPoints(Order))*3e4;
+    % Ek=ones(nElem,NumberOfGaussPoints(Order))*3e4;
 end
 
 file_nodes=strcat(str_elements,"Nodes_L",level,".txt");
@@ -171,11 +172,11 @@ Nodes=dlmread(file_nodes);
 
 filesNodesMax=strcat(str_elements,"Nodes_L_",num2str(MaxLVL),".txt");
 NodesMax=dlmread(filesNodesMax);
-% 
+%
 % nElem=size(Elements,1);
 % Elements(:,4) = 1:nElem;
-% 
-% 
+%
+%
 % if(size(E,2)==1)
 % Ek = E*ones(nElem,1);
 % else
@@ -192,7 +193,7 @@ for k = 1:nElem, Materials(k,:) = {k 'linear' {'isotropic' [Ek(k,:) nu] }}; end
 
 %  figure;
 %  plotnodes(Nodes);
-% 
+%
 %  figure;
 %  plotelem(Nodes,Elements,Types);
 % pause(10)
@@ -200,33 +201,49 @@ for k = 1:nElem, Materials(k,:) = {k 'linear' {'isotropic' [Ek(k,:) nu] }}; end
 LeftNodes=selectnode(Nodes,-1e-6,-inf,-inf,1e-6,inf,inf);
 RightNodes=selectnode(Nodes,max(Nodes(:,2))-1e-6,-inf,-inf,max(Nodes(:,2))+1e-6,inf,inf);
 DOF = getdof(Elements,Types);
-sdof = [0.03;0.04;0.05;0.06;LeftNodes(:,1)+0.01;RightNodes(:,1)+0.01;LeftNodes(:,1)+0.02;RightNodes(:,1)+0.02]; 
+sdof = [0.03;0.04;0.05;0.06;LeftNodes(:,1)+0.01;RightNodes(:,1)+0.01;LeftNodes(:,1)+0.02;RightNodes(:,1)+0.02];
 DOF = removedof(DOF,sdof);
 sdog_algo=unique(floor(sdof));
 
 
 
-forceNodes=selectnode(Nodes,min(Nodes(:,2))-1e-6,max(Nodes(:,3))-1e-6,-inf,max(Nodes(:,2))+1e-6,max(Nodes(:,3))+1e-6,inf);
+yposNodes=uniquetol(sort(Nodes(:,3)),10^-5);
+% yposNodes=yposNodes([2,4,6]);%%%%%%%%%%%%debug
+% ary=[0:2*pi/(length(yposNodes)-1):2*pi];
+seldof=[];
+vec=[];
+
+
+for id=1:length(yposNodes)
+
+forceNodes=selectnode(Nodes,min(Nodes(:,2))-1e-6,yposNodes(id)-1e-6,-inf,max(Nodes(:,2))+1e-6,yposNodes(id)+1e-6,inf);
 forceNodes=forceNodes(:,1);
 [posy,srt]=sort(Nodes(forceNodes,2),'ascend');
 forceNodes=forceNodes(srt);
-
+ar=[0:2*pi/(length(forceNodes)-1):2*pi];
+% vec_int=(-cos(ar)+1)/sum((-cos(ar)+1)).*(-cos(ary(id))+1)/sum((-cos(ary)+1));
+vec_int=(-cos(ar)+1)/sum((-cos(ar)+1)).*1/length(yposNodes);
 
 
 
 forceNodes=forceNodes+0.02;
-seldof=forceNodes';
+seldof_int=forceNodes';
+
+seldof=[seldof seldof_int];
+vec=[vec vec_int];
+
+end
+
+
 %% Load
 
 Force=10000000*(0:1:1);
 
 
     PLoad=Force;
-% P = nodalvalues(DOF,seldof,[-1*ones(1,size(seldof,2))]);
-ar=[0:2*pi/(length(forceNodes)-1):2*pi];
-vec=(-cos(ar)+1)/sum((-cos(ar)+1));
+% % % % % % % % ar=[0:2*pi/(length(forceNodes)-1):2*pi];
+% % % % % % % % vec=(-cos(ar)+1)/sum((-cos(ar)+1));
 P = nodalvalues(DOF,seldof,vec);
-
 %% Compute displacements
 U=solver_nr(Nodes,Elements,Types,Sections,Materials,DOF,P,PLoad,Options,[],[],[],[],[]);
 [K,L]=size(U);
@@ -234,7 +251,7 @@ U=solver_nr(Nodes,Elements,Types,Sections,Materials,DOF,P,PLoad,Options,[],[],[]
 %fprintf('before loop')
 
 % % % % for ik=1:L
-% % % % 
+% % % %
 % % % % u=U(:,ik);
 % % % % u=u';
 % % % %         matxDir=zeros(nely+1,nelx+1);
@@ -258,9 +275,9 @@ U=solver_nr(Nodes,Elements,Types,Sections,Materials,DOF,P,PLoad,Options,[],[],[]
 % % % %         end
 % % % %         Matx=matxDir;
 % % % %         Maty=matyDir;
-% % % %         
+% % % %
 % % % %         [n,m]=size(matxDir);
-% % % %     maxNdof=2*(nelx+1)*(nely+1);    
+% % % %     maxNdof=2*(nelx+1)*(nely+1);
 % % % %             Pc=zeros(maxNdof,1);
 % % % %             x=1;
 % % % %             i=1;
@@ -268,21 +285,21 @@ U=solver_nr(Nodes,Elements,Types,Sections,Materials,DOF,P,PLoad,Options,[],[],[]
 % % % %             while(y<=m)
 % % % %                 x=1;
 % % % %                 while(x<=n)
-% % % %                     
-% % % %                     
+% % % %
+% % % %
 % % % %                     Pc(i)=matxDir(x,y);
 % % % %                     Pc(i+1)=matyDir(x,y);
 % % % %                     i=i+2;
 % % % %                     x=x+1;
 % % % %                 end
 % % % %                 y=y+1;
-% % % %             end 
-% % % %             
+% % % %             end
+% % % %
 % % % %             if(ik==1)
 % % % %             u_new=Pc;
 % % % %             else
-% % % %             u_new=[u_new Pc];    
-% % % %             
+% % % %             u_new=[u_new Pc];
+% % % %
 % % % %             end
 % % % % end
 
@@ -290,57 +307,100 @@ U=solver_nr(Nodes,Elements,Types,Sections,Materials,DOF,P,PLoad,Options,[],[],[]
 %u_out=min(u);
 U=abs(U);
 if(NQoI==1)
-
-res_node=selectnode(Nodes,max(Nodes(:,2))/2-1e-6,min(Nodes(:,3))-1e-6,-inf,max(Nodes(:,2))/2+1e-6,min(Nodes(:,3))+1e-6,inf);
-u_out=selectdof(DOF,res_node(:,1)+0.02)*U(:,end);
-
-dlmwrite(fileRES,u_out,'delimiter',' ','precision',15);
-
-
-else
-res_node=selectnode(Nodes,-inf,min(Nodes(:,3))-1e-6,-inf,inf,min(Nodes(:,3))+1e-6,inf);
-
-[Nodes_x,I]=sort(res_node(:,2));
-
-u_out=selectdof(DOF,res_node(I,1)+0.02)*U(:,end); 
-
-
-
-res_node_max=selectnode(NodesMax,-inf,min(NodesMax(:,3))-1e-6,-inf,inf,min(NodesMax(:,3))+1e-6,inf);
-
-Nodes_x_max=sort(res_node_max(:,2));
-
-Nodes_y_max=res_node_max(:,3);
-
-u_out=interp1(Nodes_x,u_out,Nodes_x_max);
-
     
+
+x=-1:0.2:1;
+[X,Y]=meshgrid(x,x);
+pt=[reshape(X,1,size(X,2)*size(X,1));reshape(Y,1,size(Y,2)*size(Y,1));ones(1,size(Y,2)*size(Y,1));2*ones(1,size(Y,2)*size(Y,1))];
+
+
+TriangleCoordLocal=[[-1;-1;1;2],[1;-1;1;2],[1;1;1;1],[-1;1;1;2]];
+
+pts=[];
+Res=[];
+for idx=1:nElem
+    
+  TriangleVertices=Nodes(Elements(idx,5:8),2:3);
+  TriangleVertices=TriangleVertices';
+  TriangleVertices=[TriangleVertices;[1 1 1 1];[2 2 2 2]];  
+  TransformationMatrix=TriangleVertices*inv(TriangleCoordLocal);
+  pt_global=TransformationMatrix*pt;
+
+ pts=[pts; [pt_global(1:2,:)' ones(length( pt_global(1:2,:)'),1).*idx]]; 
+end 
+ 
+ %for jx=1:length(pt)
+ 
+  idx=find(abs(pts(:,1)-2.5) < 0.001);
+ pts_int=pts(idx,:);  
+ midelem=pts_int(find(abs(pts_int(:,2)-0.5) < 0.001),end);
+
+ Nod=Elements(midelem,5:end);
+ 
+  for jx=1:length(pt)
+
+ 
+ switch Order
+    case 1
+ Nwres(jx)=sh_qs4(pt(1,jx),pt(2,jx))'*selectdof(DOF,Nod+0.02)*U(:,end); 
+     String="Order 1";
+    case 2
+ Nwres(jx)=sh_qs9(pt(1,jx),pt(2,jx))'*selectdof(DOF,Nod+0.02)*U(:,end); 
+      String="Order 2";
+
+    case 3
+ Nwres(jx)=sh_qs16(pt(1,jx),pt(2,jx))'*selectdof(DOF,Nod+0.02)*U(:,end); 
+       String="Order 3";
+    case 4
+ Nwres(jx)=sh_qs25(pt(1,jx),pt(2,jx))'*selectdof(DOF,Nod+0.02)*U(:,end);
+       String="Order 4";
+    case 5
+ Nwres(jx)=sh_qs36(pt(1,jx),pt(2,jx))'*selectdof(DOF,Nod+0.02)*U(:,end); 
+       String="Order 5";
+        
+end
+ 
+  end
+ 
+ 
+  Res=[Res;  Nwres'];
+%end 
+pts=pts(find(pts(:,3)==midelem),1:2);
+  idx=find(abs(pts(:,1)-2.5) < 0.001);
+out=[pts(idx,2) Res(idx)];
+idx=find(abs(out(:,1)-0.5) < 0.001);
+u_out=out(idx,2);
 dlmwrite(fileRES,u_out,'delimiter',' ','precision',15);
+    
+    
+else
+    res_node=selectnode(Nodes,-inf,min(Nodes(:,3))-1e-6,-inf,inf,min(Nodes(:,3))+1e-6,inf);
+    
+    [Nodes_x,I]=sort(res_node(:,2));
+    
+    u_out=selectdof(DOF,res_node(I,1)+0.02)*U(:,end);
+    
+    
+    
+    res_node_max=selectnode(NodesMax,-inf,min(NodesMax(:,3))-1e-6,-inf,inf,min(NodesMax(:,3))+1e-6,inf);
+    
+    Nodes_x_max=sort(res_node_max(:,2));
+    
+    Nodes_y_max=res_node_max(:,3);
+    
+    u_out=interp1(Nodes_x,u_out,Nodes_x_max);
+    
+    
+    dlmwrite(fileRES,u_out,'delimiter',' ','precision',15);
     
 end
 
 
-% [Matx,Maty] = Extract_matrix_Displacements_From_Vector(U,nelx,nely);
-%% Plot displacements
-% figure
-% plotdisp(Nodes,Elements,Types,DOF,U(:,end))
-% 
-% figure;
-% animdisp(Nodes,Elements,Types,DOF,U)
-% 
-% figure;
-% seldof = find(Nodes(:,2)==Lx/2 & Nodes(:,3)==0 & round(Nodes(:,4)*1000)/1000==0)+0.02;
-% plot(selectdof(DOF,seldof)*U,PLoad)
-% xlabel('Displacement [mm]')
-% ylabel('Force [N]')
-% hold on
 
 
-% seldof = find(Nodes(:,2)==Lx/2 & Nodes(:,3)==Ly & round(Nodes(:,4)*1000)/1000==0)+0.02;
-% plot(selectdof(DOF,seldof)*U,PLoad)
-% xlabel('Displacement [mm]')
-% ylabel('Force [N]')
-% legend('Lower level','Upper level')
+clear all;
+clc;
+close all;
 
 end
 

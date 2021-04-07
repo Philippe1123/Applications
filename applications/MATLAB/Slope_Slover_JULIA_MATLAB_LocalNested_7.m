@@ -288,29 +288,32 @@ Div=1;
 % while (Div==1)
     Pload=(0:StepSize:1); %load
      [U,~,~,~,Div]=solver_nr(Nodes,Elements,Types,Sections,Materials,DOF,P,Pload,Options,[],[],[],[],[]);
-%
-%     res=-selectdof(DOF,8+0.02)*[zeros(size(DOF)) U];
-%     res=res(end);
-%     count=1;
-%     if(Div==1||res>1||res<0)
-%         StepSize=StepSize/2;
-%         Div=1;
-%         count=count+1;
-%         if(count>10)
-%
-%             Div=0;
-%             U=zeros(length(Nodes),1);
-%         end
-%     end
-%
-%
-% end
-res1=-selectdof(DOF,CornerNode(1)+0.02)*[zeros(size(DOF)) U];
+
+[elempos,col]=find(Elements==CornerNode(1));
+elem=max(elempos);
+
+NodesElem=Elements(elem,5:end);
+
+% posNodes=Nodes(NodesElem,2:3);
+% 
+% xcoord=sum(posNodes(:,1))/3;
+% ycoord=sum(posNodes(:,2))/3;
+
+
+posNodesTriangleLocal=[[0 1 0]',[0 0 1]'];
+xcoord=sum(posNodesTriangleLocal(:,1))/3;
+ycoord=sum(posNodesTriangleLocal(:,2))/3;
+
+ Solcenter=-sh_t6(xcoord,ycoord)'*selectdof(DOF,NodesElem+0.02)*U(:,end); 
+
+
+
+% res1=-selectdof(DOF,CornerNode(1)+0.02)*[zeros(size(DOF)) U];
 %res2=-selectdof(DOF,9+0.02)*[zeros(size(DOF)) U];
 %res=[res1 res2];
-res=res1(end);
+% res=res1(end);
 
-dlmwrite(fileRES,res,'delimiter',' ','precision',15);
+dlmwrite(fileRES,Solcenter,'delimiter',' ','precision',15);
 
 
 end

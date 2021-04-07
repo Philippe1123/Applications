@@ -10,15 +10,14 @@ using Pkg
 using MATLAB
 using DelimitedFiles
 using Revise
-using LatticeRules
-using DigitalNets
 
 
 #./julia /home/philippeb/.julia/v0.6/MultilevelEstimators/applications/SPDE/Run.jl 2>&1 | tee /home/philippeb/.julia/v0.6/MultilevelEstimators/applications/SPDE/10112018_Run_Log.txt
 numberOfProcs=24
 
+addprocs(numberOfProcs)
 println("Procs added")
-#println(numberOfProcs)
+println(numberOfProcs)
 
 #@everywhere using Coupling
 @everywhere push!(LOAD_PATH,(joinpath("/","home","philippe",".julia","dev","Applications","applications","SPDE")))
@@ -29,11 +28,11 @@ println("Procs added")
 @everywhere using MATLAB
 
 
-pathToInterm=joinpath("/","home","philippe",".julia","dev","Applications","applications","SPDE","data")
+#pathToInterm=joinpath("/","home","philippe",".julia","dev","Applications","applications","SPDE","data")
 
 #pathToInterm=joinpath("/","home","philippeb",".julia","packages","MultilevelEstimators","l8j9n","applications","SPDE","data")
 
-#pathToInterm="/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data"
+pathToInterm="/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data"
 
 folder = string(pathToInterm,"/Interm/Slope") # for report
 folder_with_elements=string(pathToInterm,"/Mesh/Slope")
@@ -227,14 +226,12 @@ end
 #---------------
 
 
-nterms=400
-pt=LatticeRule("/home/philippe/.julia/dev/Applications/applications/SPDE/lattice-32001-1024-1048576.3600.txt",nterms)
 
-init_Beam_MC_L_Het_Single=Coupling_Slope_DEBUG.init_Slope(SL(),true,false,false,true,true,startlevel=4,max_level=4,MatlabSampler,folder,folder_with_elements,false,numberoftol=1,nb_of_warm_up_samples=2,nshifts=10,nterms=nterms,correlateOnlyDiffs=true,corr_len=1.0,point_generator=pt)
 
+
+init_Beam_MC_L_Het_Single=Coupling_Slope_DEBUG.init_Slope(ML(),true,false,false,true,true,startlevel=0,max_level=2,MatlabSampler,folder,folder_with_elements,false,numberoftol=1,nb_of_warm_up_samples=2,nshifts=10,nterms=400,correlateOnlyDiffs=true,corr_len=0.3)
 estimator=init_Beam_MC_L_Het_Single
-println(Int64.(estimator.internals.sample_method_internals.generators[1][1].lattice_rule.z))
-#history = run(estimator,2.878e-03)
+history = run(estimator,2.878e-03)
 
 #init_Beam_MC_L_Het_Single=Coupling_Slope.init_Slope(ML(),true,false,false,true,true,startlevel=0,MatlabSampler,folder,folder_with_elements,false,numberoftol=10,nb_of_warm_up_samples=2,nshifts=10,nterms=10)
 #estimator=init_Beam_MC_L_Het_Single
