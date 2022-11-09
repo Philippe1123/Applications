@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#PBS -l walltime=30:00:00
+#PBS -l nodes=1:ppn=32:skylake
+#PBS -l pmem=5gb
+#PBS -N Run_Beam
+#PBS -A lp_uncertainty_quantification
+
+
+module purge
+module load matlab/R2019a
+cd julia-1.2.0/bin/
+./julia /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/packages/MultilevelEstimators/KoRDo/applications/SPDE/Run_Beam.jl 2>&1 | tee /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/packages/MultilevelEstimators/KoRDo/applications/SPDE/Beam_hpc_21012020_Genius_Paper.txt
+

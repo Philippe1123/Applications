@@ -1,0 +1,642 @@
+WARNING: Method definition show(IO, Base.IteratorsMD.CartesianIndex{N} where N) in module IteratorsMD at multidimensional.jl:85 overwritten in module MultilevelEstimators at /user/leuven/330/vsc33032/.julia/dev/MultilevelEstimators/src/index.jl:23.
+  ** incremental compilation may be fatally broken for this module **
+
+Procs added
+24
+ishigherorderRef true
+number Of TOlerances 34
+Max number of levels 6
+Base.Iterators.Filter{MultilevelEstimators.var"#5#6"{Int64},CartesianIndices{1,Tuple{UnitRange{Int64}}}}(MultilevelEstimators.var"#5#6"{Int64}(6), Level[0, 1, 2, 3, 4, 5, 6, 7])
+ElementRefinement false
+isHigerOrderRefinement true
+p-ref and hp-ref
+p-ref and hp-ref
+p-ref and hp-ref
+p-ref and hp-ref
+p-ref and hp-ref
+p-ref and hp-ref
+p-ref and hp-ref
+TruncatedNormal{Int64}(μ = 0, σ = 1, a = -2, b = 2)
+P of covar equals
+2
+Master Field for Level: 0
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 528 points and 33 elements, using a KL expansion with 400 terms
+---------------------------------------------
+Master Field for Level: 1
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 627 points and 33 elements, using a KL expansion with 400 terms
+Slave Fields for Level: 1
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 528 points and 33 elements, using a KL expansion with 400 terms
+WARNING: Eigenfunctions Not Matching, Program will switch to interpolate
+---------------------------------------------
+Master Field for Level: 2
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 924 points and 33 elements, using a KL expansion with 400 terms
+Slave Fields for Level: 2
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 627 points and 33 elements, using a KL expansion with 400 terms
+WARNING: Eigenfunctions Not Matching, Program will switch to interpolate
+---------------------------------------------
+Master Field for Level: 3
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 1221 points and 33 elements, using a KL expansion with 400 terms
+Slave Fields for Level: 3
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 924 points and 33 elements, using a KL expansion with 400 terms
+Eigenfunctions Matching
+---------------------------------------------
+Master Field for Level: 4
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2013 points and 33 elements, using a KL expansion with 400 terms
+Slave Fields for Level: 4
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 1221 points and 33 elements, using a KL expansion with 400 terms
+Eigenfunctions Matching
+---------------------------------------------
+Master Field for Level: 5
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2409 points and 33 elements, using a KL expansion with 400 terms
+Slave Fields for Level: 5
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2013 points and 33 elements, using a KL expansion with 400 terms
+Eigenfunctions Matching
+---------------------------------------------
+Master Field for Level: 6
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 4158 points and 33 elements, using a KL expansion with 400 terms
+Slave Fields for Level: 6
+Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2409 points and 33 elements, using a KL expansion with 400 terms
+WARNING: Eigenfunctions Not Matching, Program will switch to interpolate
+---------------------------------------------
+Dict{Any,Any}(6 => Dict{Any,Any}(6 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 4158 points and 33 elements, using a KL expansion with 400 terms),3 => Dict{Any,Any}(3 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 1221 points and 33 elements, using a KL expansion with 400 terms,4 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 1221 points and 33 elements, using a KL expansion with 400 terms),4 => Dict{Any,Any}(4 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2013 points and 33 elements, using a KL expansion with 400 terms,5 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2013 points and 33 elements, using a KL expansion with 400 terms),0 => Dict{Any,Any}(0 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 528 points and 33 elements, using a KL expansion with 400 terms,1 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 528 points and 33 elements, using a KL expansion with 400 terms),2 => Dict{Any,Any}(3 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 924 points and 33 elements, using a KL expansion with 400 terms,2 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 924 points and 33 elements, using a KL expansion with 400 terms),1 => Dict{Any,Any}(2 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 627 points and 33 elements, using a KL expansion with 400 terms,1 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 627 points and 33 elements, using a KL expansion with 400 terms),5 => Dict{Any,Any}(6 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2409 points and 33 elements, using a KL expansion with 400 terms,5 => Gaussian random field with 2d Matérn covariance function (λ=1.5, ν=2.0, σ=1.0, p=2.0) on a mesh with 2409 points and 33 elements, using a KL expansion with 400 terms))
+
+Gamma is
+1.5
++-------------------------------------------------------------------------------+
+| *** MultilevelEstimators.jl @2021-06-17T17:47:39.572                          |
+| *** This is a Estimator{ML, QMC}                                              |
+| *** Simulating Slope MLQMC_Het_High_17-06-2021-T:17:47:32[99353]              |
+| *** Tolerance on RMSE ϵ = 2.878e-03                                           |
++-------------------------------------------------------------------------------+
+Currently running on level 0.
+Taking 10 x 2 warm-up samples at level 0...      From worker 3:	{Error using dlmread (line 62)
+      From worker 3:	The file
+      From worker 3:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_3'
+      From worker 3:	could not be opened because: No such file or directory
+      From worker 3:	
+      From worker 3:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 3:	c=dlmread(fileC);
+      From worker 3:	} 
+      From worker 15:	{Error using dlmread (line 62)
+      From worker 15:	The file
+      From worker 15:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_15'
+      From worker 15:	could not be opened because: No such file or directory
+      From worker 15:	
+      From worker 15:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 15:	c=dlmread(fileC);
+      From worker 15:	} 
+      From worker 6:	{Error using dlmread (line 62)
+      From worker 6:	The file
+      From worker 6:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_6'
+      From worker 6:	could not be opened because: No such file or directory
+      From worker 6:	
+      From worker 6:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 6:	c=dlmread(fileC);
+      From worker 6:	} 
+      From worker 13:	{Error using dlmread (line 62)
+      From worker 13:	The file
+      From worker 13:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_13'
+      From worker 13:	could not be opened because: No such file or directory
+      From worker 13:	
+      From worker 13:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 13:	c=dlmread(fileC);
+      From worker 13:	} 
+      From worker 21:	{Error using dlmread (line 62)
+      From worker 21:	The file
+      From worker 21:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_21'
+      From worker 21:	could not be opened because: No such file or directory
+      From worker 21:	
+      From worker 21:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 21:	c=dlmread(fileC);
+      From worker 21:	} 
+      From worker 4:	{Error using dlmread (line 62)
+      From worker 4:	The file
+      From worker 4:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_4'
+      From worker 4:	could not be opened because: No such file or directory
+      From worker 4:	
+      From worker 4:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 4:	c=dlmread(fileC);
+      From worker 4:	} 
+      From worker 19:	{Error using dlmread (line 62)
+      From worker 19:	The file
+      From worker 19:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_19'
+      From worker 19:	could not be opened because: No such file or directory
+      From worker 19:	
+      From worker 19:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 19:	c=dlmread(fileC);
+      From worker 19:	} 
+      From worker 11:	{Error using dlmread (line 62)
+      From worker 11:	The file
+      From worker 11:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_11'
+      From worker 11:	could not be opened because: No such file or directory
+      From worker 11:	
+      From worker 11:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 11:	c=dlmread(fileC);
+      From worker 11:	} 
+      From worker 16:	{Error using dlmread (line 62)
+      From worker 16:	The file
+      From worker 16:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_16'
+      From worker 16:	could not be opened because: No such file or directory
+      From worker 16:	
+      From worker 16:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 16:	c=dlmread(fileC);
+      From worker 16:	} 
+      From worker 20:	{Error using dlmread (line 62)
+      From worker 20:	The file
+      From worker 20:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_20'
+      From worker 20:	could not be opened because: No such file or directory
+      From worker 20:	
+      From worker 20:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 20:	c=dlmread(fileC);
+      From worker 20:	} 
+      From worker 10:	{Error using dlmread (line 62)
+      From worker 10:	The file
+      From worker 10:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_10'
+      From worker 10:	could not be opened because: No such file or directory
+      From worker 10:	
+      From worker 10:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 10:	c=dlmread(fileC);
+      From worker 10:	} 
+      From worker 5:	{Error using dlmread (line 62)
+      From worker 5:	The file
+      From worker 5:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_5'
+      From worker 5:	could not be opened because: No such file or directory
+      From worker 5:	
+      From worker 5:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 5:	c=dlmread(fileC);
+      From worker 5:	} 
+      From worker 12:	{Error using dlmread (line 62)
+      From worker 12:	The file
+      From worker 12:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_12'
+      From worker 12:	could not be opened because: No such file or directory
+      From worker 12:	
+      From worker 12:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 12:	c=dlmread(fileC);
+      From worker 12:	} 
+      From worker 9:	{Error using dlmread (line 62)
+      From worker 9:	The file
+      From worker 9:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_9'
+      From worker 9:	could not be opened because: No such file or directory
+      From worker 9:	
+      From worker 9:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 9:	c=dlmread(fileC);
+      From worker 9:	} 
+      From worker 7:	{Error using dlmread (line 62)
+      From worker 7:	The file
+      From worker 7:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_7'
+      From worker 7:	could not be opened because: No such file or directory
+      From worker 7:	
+      From worker 7:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 7:	c=dlmread(fileC);
+      From worker 7:	} 
+      From worker 18:	{Error using dlmread (line 62)
+      From worker 18:	The file
+      From worker 18:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_18'
+      From worker 18:	could not be opened because: No such file or directory
+      From worker 18:	
+      From worker 18:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 18:	c=dlmread(fileC);
+      From worker 18:	} 
+      From worker 8:	{Error using dlmread (line 62)
+      From worker 8:	The file
+      From worker 8:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_8'
+      From worker 8:	could not be opened because: No such file or directory
+      From worker 8:	
+      From worker 8:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 8:	c=dlmread(fileC);
+      From worker 8:	} 
+      From worker 2:	{Error using dlmread (line 62)
+      From worker 2:	The file
+      From worker 2:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_2'
+      From worker 2:	could not be opened because: No such file or directory
+      From worker 2:	
+      From worker 2:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 2:	c=dlmread(fileC);
+      From worker 2:	} 
+      From worker 17:	{Error using dlmread (line 62)
+      From worker 17:	The file
+      From worker 17:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_17'
+      From worker 17:	could not be opened because: No such file or directory
+      From worker 17:	
+      From worker 17:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 17:	c=dlmread(fileC);
+      From worker 17:	} 
+      From worker 14:	{Error using dlmread (line 62)
+      From worker 14:	The file
+      From worker 14:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_14'
+      From worker 14:	could not be opened because: No such file or directory
+      From worker 14:	
+      From worker 14:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 14:	c=dlmread(fileC);
+      From worker 14:	} 
+      From worker 5:	{Error using dlmread (line 62)
+      From worker 5:	The file
+      From worker 5:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_5'
+      From worker 5:	could not be opened because: No such file or directory
+      From worker 5:	
+      From worker 5:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 5:	c=dlmread(fileC);
+      From worker 5:	} 
+      From worker 18:	{Error using dlmread (line 62)
+      From worker 18:	The file
+      From worker 18:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_18'
+      From worker 18:	could not be opened because: No such file or directory
+      From worker 18:	
+      From worker 18:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 18:	c=dlmread(fileC);
+      From worker 18:	} 
+      From worker 8:	{Error using dlmread (line 62)
+      From worker 8:	The file
+      From worker 8:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_8'
+      From worker 8:	could not be opened because: No such file or directory
+      From worker 8:	
+      From worker 8:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 8:	c=dlmread(fileC);
+      From worker 8:	} 
+      From worker 9:	{Error using dlmread (line 62)
+      From worker 9:	The file
+      From worker 9:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_9'
+      From worker 9:	could not be opened because: No such file or directory
+      From worker 9:	
+      From worker 9:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 9:	c=dlmread(fileC);
+      From worker 9:	} 
+      From worker 3:	{Error using dlmread (line 62)
+      From worker 3:	The file
+      From worker 3:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_3'
+      From worker 3:	could not be opened because: No such file or directory
+      From worker 3:	
+      From worker 3:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 3:	c=dlmread(fileC);
+      From worker 3:	} 
+      From worker 10:	{Error using dlmread (line 62)
+      From worker 10:	The file
+      From worker 10:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_10'
+      From worker 10:	could not be opened because: No such file or directory
+      From worker 10:	
+      From worker 10:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 10:	c=dlmread(fileC);
+      From worker 10:	} 
+      From worker 17:	{Error using dlmread (line 62)
+      From worker 17:	The file
+      From worker 17:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_17'
+      From worker 17:	could not be opened because: No such file or directory
+      From worker 17:	
+      From worker 17:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 17:	c=dlmread(fileC);
+      From worker 17:	} 
+      From worker 2:	{Error using dlmread (line 62)
+      From worker 2:	The file
+      From worker 2:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_2'
+      From worker 2:	could not be opened because: No such file or directory
+      From worker 2:	
+      From worker 2:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 2:	c=dlmread(fileC);
+      From worker 2:	} 
+      From worker 19:	{Error using dlmread (line 62)
+      From worker 19:	The file
+      From worker 19:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_19'
+      From worker 19:	could not be opened because: No such file or directory
+      From worker 19:	
+      From worker 19:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 19:	c=dlmread(fileC);
+      From worker 19:	} 
+      From worker 6:	{Error using dlmread (line 62)
+      From worker 6:	The file
+      From worker 6:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_6'
+      From worker 6:	could not be opened because: No such file or directory
+      From worker 6:	
+      From worker 6:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 6:	c=dlmread(fileC);
+      From worker 6:	} 
+      From worker 7:	{Error using dlmread (line 62)
+      From worker 7:	The file
+      From worker 7:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_7'
+      From worker 7:	could not be opened because: No such file or directory
+      From worker 7:	
+      From worker 7:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 7:	c=dlmread(fileC);
+      From worker 7:	} 
+      From worker 14:	{Error using dlmread (line 62)
+      From worker 14:	The file
+      From worker 14:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_14'
+      From worker 14:	could not be opened because: No such file or directory
+      From worker 14:	
+      From worker 14:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 14:	c=dlmread(fileC);
+      From worker 14:	} 
+      From worker 13:	{Error using dlmread (line 62)
+      From worker 13:	The file
+      From worker 13:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_13'
+      From worker 13:	could not be opened because: No such file or directory
+      From worker 13:	
+      From worker 13:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 13:	c=dlmread(fileC);
+      From worker 13:	} 
+      From worker 4:	{Error using dlmread (line 62)
+      From worker 4:	The file
+      From worker 4:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_4'
+      From worker 4:	could not be opened because: No such file or directory
+      From worker 4:	
+      From worker 4:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 4:	c=dlmread(fileC);
+      From worker 4:	} 
+      From worker 21:	{Error using dlmread (line 62)
+      From worker 21:	The file
+      From worker 21:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_21'
+      From worker 21:	could not be opened because: No such file or directory
+      From worker 21:	
+      From worker 21:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 21:	c=dlmread(fileC);
+      From worker 21:	} 
+      From worker 15:	{Error using dlmread (line 62)
+      From worker 15:	The file
+      From worker 15:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_15'
+      From worker 15:	could not be opened because: No such file or directory
+      From worker 15:	
+      From worker 15:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 15:	c=dlmread(fileC);
+      From worker 15:	} 
+      From worker 18:	{Error using dlmread (line 62)
+      From worker 18:	The file
+      From worker 18:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_18'
+      From worker 18:	could not be opened because: No such file or directory
+      From worker 18:	
+      From worker 18:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 18:	c=dlmread(fileC);
+      From worker 18:	} 
+      From worker 8:	{Error using dlmread (line 62)
+      From worker 8:	The file
+      From worker 8:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_8'
+      From worker 8:	could not be opened because: No such file or directory
+      From worker 8:	
+      From worker 8:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 8:	c=dlmread(fileC);
+      From worker 8:	} 
+      From worker 5:	{Error using dlmread (line 62)
+      From worker 5:	The file
+      From worker 5:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_5'
+      From worker 5:	could not be opened because: No such file or directory
+      From worker 5:	
+      From worker 5:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 5:	c=dlmread(fileC);
+      From worker 5:	} 
+      From worker 7:	{Error using dlmread (line 62)
+      From worker 7:	The file
+      From worker 7:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_7'
+      From worker 7:	could not be opened because: No such file or directory
+      From worker 7:	
+      From worker 7:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 7:	c=dlmread(fileC);
+      From worker 7:	} 
+      From worker 19:	{Error using dlmread (line 62)
+      From worker 19:	The file
+      From worker 19:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_19'
+      From worker 19:	could not be opened because: No such file or directory
+      From worker 19:	
+      From worker 19:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 19:	c=dlmread(fileC);
+      From worker 19:	} 
+      From worker 6:	{Error using dlmread (line 62)
+      From worker 6:	The file
+      From worker 6:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_6'
+      From worker 6:	could not be opened because: No such file or directory
+      From worker 6:	
+      From worker 6:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 6:	c=dlmread(fileC);
+      From worker 6:	} 
+      From worker 3:	{Error using dlmread (line 62)
+      From worker 3:	The file
+      From worker 3:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_3'
+      From worker 3:	could not be opened because: No such file or directory
+      From worker 3:	
+      From worker 3:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 3:	c=dlmread(fileC);
+      From worker 3:	} 
+      From worker 2:	{Error using dlmread (line 62)
+      From worker 2:	The file
+      From worker 2:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_2'
+      From worker 2:	could not be opened because: No such file or directory
+      From worker 2:	
+      From worker 2:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 2:	c=dlmread(fileC);
+      From worker 2:	} 
+      From worker 9:	{Error using dlmread (line 62)
+      From worker 9:	The file
+      From worker 9:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_9'
+      From worker 9:	could not be opened because: No such file or directory
+      From worker 9:	
+      From worker 9:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 9:	c=dlmread(fileC);
+      From worker 9:	} 
+      From worker 17:	{Error using dlmread (line 62)
+      From worker 17:	The file
+      From worker 17:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_17'
+      From worker 17:	could not be opened because: No such file or directory
+      From worker 17:	
+      From worker 17:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 17:	c=dlmread(fileC);
+      From worker 17:	} 
+      From worker 11:	{Error using dlmread (line 62)
+      From worker 11:	The file
+      From worker 11:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_11'
+      From worker 11:	could not be opened because: No such file or directory
+      From worker 11:	
+      From worker 11:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 11:	c=dlmread(fileC);
+      From worker 11:	} 
+      From worker 21:	{Error using dlmread (line 62)
+      From worker 21:	The file
+      From worker 21:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_21'
+      From worker 21:	could not be opened because: No such file or directory
+      From worker 21:	
+      From worker 21:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 21:	c=dlmread(fileC);
+      From worker 21:	} 
+      From worker 14:	{Error using dlmread (line 62)
+      From worker 14:	The file
+      From worker 14:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_14'
+      From worker 14:	could not be opened because: No such file or directory
+      From worker 14:	
+      From worker 14:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 14:	c=dlmread(fileC);
+      From worker 14:	} 
+      From worker 16:	{Error using dlmread (line 62)
+      From worker 16:	The file
+      From worker 16:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_16'
+      From worker 16:	could not be opened because: No such file or directory
+      From worker 16:	
+      From worker 16:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 16:	c=dlmread(fileC);
+      From worker 16:	} 
+      From worker 12:	{Error using dlmread (line 62)
+      From worker 12:	The file
+      From worker 12:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_12'
+      From worker 12:	could not be opened because: No such file or directory
+      From worker 12:	
+      From worker 12:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 12:	c=dlmread(fileC);
+      From worker 12:	} 
+      From worker 20:	{Error using dlmread (line 62)
+      From worker 20:	The file
+      From worker 20:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_20'
+      From worker 20:	could not be opened because: No such file or directory
+      From worker 20:	
+      From worker 20:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 20:	c=dlmread(fileC);
+      From worker 20:	} 
+      From worker 10:	{Error using dlmread (line 62)
+      From worker 10:	The file
+      From worker 10:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_10'
+      From worker 10:	could not be opened because: No such file or directory
+      From worker 10:	
+      From worker 10:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 10:	c=dlmread(fileC);
+      From worker 10:	} 
+      From worker 13:	{Error using dlmread (line 62)
+      From worker 13:	The file
+      From worker 13:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_13'
+      From worker 13:	could not be opened because: No such file or directory
+      From worker 13:	
+      From worker 13:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 13:	c=dlmread(fileC);
+      From worker 13:	} 
+      From worker 4:	{Error using dlmread (line 62)
+      From worker 4:	The file
+      From worker 4:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_4'
+      From worker 4:	could not be opened because: No such file or directory
+      From worker 4:	
+      From worker 4:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 4:	c=dlmread(fileC);
+      From worker 4:	} 
+      From worker 15:	{Error using dlmread (line 62)
+      From worker 15:	The file
+      From worker 15:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_15'
+      From worker 15:	could not be opened because: No such file or directory
+      From worker 15:	
+      From worker 15:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 15:	c=dlmread(fileC);
+      From worker 15:	} 
+      From worker 8:	{Error using dlmread (line 62)
+      From worker 8:	The file
+      From worker 8:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_8'
+      From worker 8:	could not be opened because: No such file or directory
+      From worker 8:	
+      From worker 8:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 8:	c=dlmread(fileC);
+      From worker 8:	} 
+      From worker 18:	{Error using dlmread (line 62)
+      From worker 18:	The file
+      From worker 18:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_18'
+      From worker 18:	could not be opened because: No such file or directory
+      From worker 18:	
+      From worker 18:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 18:	c=dlmread(fileC);
+      From worker 18:	} 
+      From worker 5:	{Error using dlmread (line 62)
+      From worker 5:	The file
+      From worker 5:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_5'
+      From worker 5:	could not be opened because: No such file or directory
+      From worker 5:	
+      From worker 5:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 5:	c=dlmread(fileC);
+      From worker 5:	} 
+      From worker 19:	{Error using dlmread (line 62)
+      From worker 19:	The file
+      From worker 19:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_19'
+      From worker 19:	could not be opened because: No such file or directory
+      From worker 19:	
+      From worker 19:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 19:	c=dlmread(fileC);
+      From worker 19:	} 
+      From worker 3:	{Error using dlmread (line 62)
+      From worker 3:	The file
+      From worker 3:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_3'
+      From worker 3:	could not be opened because: No such file or directory
+      From worker 3:	
+      From worker 3:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 3:	c=dlmread(fileC);
+      From worker 3:	} 
+      From worker 7:	{Error using dlmread (line 62)
+      From worker 7:	The file
+      From worker 7:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_7'
+      From worker 7:	could not be opened because: No such file or directory
+      From worker 7:	
+      From worker 7:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 7:	c=dlmread(fileC);
+      From worker 7:	} 
+      From worker 14:	{Error using dlmread (line 62)
+      From worker 14:	The file
+      From worker 14:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_14'
+      From worker 14:	could not be opened because: No such file or directory
+      From worker 14:	
+      From worker 14:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 14:	c=dlmread(fileC);
+      From worker 14:	} 
+      From worker 17:	{Error using dlmread (line 62)
+      From worker 17:	The file
+      From worker 17:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_17'
+      From worker 17:	could not be opened because: No such file or directory
+      From worker 17:	
+      From worker 17:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 17:	c=dlmread(fileC);
+      From worker 17:	} 
+      From worker 21:	{Error using dlmread (line 62)
+      From worker 21:	The file
+      From worker 21:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_21'
+      From worker 21:	could not be opened because: No such file or directory
+      From worker 21:	
+      From worker 21:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 21:	c=dlmread(fileC);
+      From worker 21:	} 
+      From worker 6:	{Error using dlmread (line 62)
+      From worker 6:	The file
+      From worker 6:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_6'
+      From worker 6:	could not be opened because: No such file or directory
+      From worker 6:	
+      From worker 6:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 6:	c=dlmread(fileC);
+      From worker 6:	} 
+      From worker 2:	{Error using dlmread (line 62)
+      From worker 2:	The file
+      From worker 2:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_2'
+      From worker 2:	could not be opened because: No such file or directory
+      From worker 2:	
+      From worker 2:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 2:	c=dlmread(fileC);
+      From worker 2:	} 
+      From worker 9:	{Error using dlmread (line 62)
+      From worker 9:	The file
+      From worker 9:	'/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Interm/Slope/Cohesion_0_9'
+      From worker 9:	could not be opened because: No such file or directory
+      From worker 9:	
+      From worker 9:	Error in Slope_Slover_JULIA_MATLAB_Supermesh (line 91)
+      From worker 9:	c=dlmread(fileC);
+      From worker 9:	} 
+ERROR: LoadError: at row 0, column 0 : ArgumentError("number of rows in dims must be > 0, got 0")
+Stacktrace:
+ [1] (::Base.var"#770#772")(::Task) at ./asyncmap.jl:178
+ [2] foreach(::Base.var"#770#772", ::Array{Any,1}) at ./abstractarray.jl:2009
+ [3] maptwice(::Function, ::Channel{Any}, ::Array{Any,1}, ::Base.Iterators.ProductIterator{Tuple{UnitRange{Int64},UnitRange{Int64}}}) at ./asyncmap.jl:178
+ [4] wrap_n_exec_twice(::Channel{Any}, ::Array{Any,1}, ::Distributed.var"#206#209"{CachingPool}, ::Function, ::Base.Iterators.ProductIterator{Tuple{UnitRange{Int64},UnitRange{Int64}}}) at ./asyncmap.jl:154
+ [5] async_usemap(::Base.var"#56#58"{Base.var"#56#57#59"{ExponentialBackOff,Nothing,Distributed.var"#222#223"{Distributed.var"#190#192"{Distributed.var"#190#191#193"{CachingPool,MultilevelEstimators.var"#f#79"{Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}},Level,Int64,MultilevelEstimators.var"#x#78"{ML{1},Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}},Level,Int64}}}}}}}, ::Base.Iterators.ProductIterator{Tuple{UnitRange{Int64},UnitRange{Int64}}}; ntasks::Function, batch_size::Nothing) at ./asyncmap.jl:103
+ [6] #asyncmap#754 at ./asyncmap.jl:81 [inlined]
+ [7] pmap(::Function, ::CachingPool, ::Base.Iterators.ProductIterator{Tuple{UnitRange{Int64},UnitRange{Int64}}}; distributed::Bool, batch_size::Int64, on_error::Nothing, retry_delays::ExponentialBackOff, retry_check::Nothing) at /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Distributed/src/pmap.jl:126
+ [8] parallel_sample!(::Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}}, ::Level, ::Int64, ::Int64) at /user/leuven/330/vsc33032/.julia/dev/MultilevelEstimators/src/sample.jl:95
+ [9] macro expansion at ./timing.jl:233 [inlined]
+ [10] sample!(::Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}}, ::Level, ::Int64) at /user/leuven/330/vsc33032/.julia/dev/MultilevelEstimators/src/sample.jl:27
+ [11] _run(::Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}}, ::Float64) at /user/leuven/330/vsc33032/.julia/dev/MultilevelEstimators/src/run.jl:67
+ [12] macro expansion at ./timing.jl:233 [inlined]
+ [13] run(::Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}}, ::Array{Float64,1}) at /user/leuven/330/vsc33032/.julia/dev/MultilevelEstimators/src/run.jl:31
+ [14] run(::Estimator{ML{1},QMC,Array{TruncatedNormal{Int64},1},Dict{Symbol,Any},MultilevelEstimators.EstimatorInternals{MultilevelEstimators.DefaultInternals{Array{Array{Array{Float64,1},1},2},Array{Int64,1},Array{Float64,1},Set{Level},MultilevelEstimators.IndexSetSize{Int64}},MultilevelEstimators.GenericIndexSetInternals,MultilevelEstimators.QMCInternals{Array{Array{ShiftedLatticeRule32{400,LatticeRule32{400},Array{Float64,1}},1},1}}}}, ::Float64) at /user/leuven/330/vsc33032/.julia/dev/MultilevelEstimators/src/run.jl:38
+ [15] top-level scope at /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/Run_Slope_Stability_Supermesh.jl:241
+ [16] include(::Function, ::Module, ::String) at ./Base.jl:380
+ [17] include(::Module, ::String) at ./Base.jl:368
+ [18] exec_options(::Base.JLOptions) at ./client.jl:296
+ [19] _start() at ./client.jl:506
+in expression starting at /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/Run_Slope_Stability_Supermesh.jl:241
+┌ Warning: Forcibly interrupting busy workers
+│   exception = rmprocs: pids [2, 3, 5, 9, 14, 18, 21, 22, 23, 24, 25] not terminated after 5.0 seconds.
+└ @ Distributed /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Distributed/src/cluster.jl:1234
+┌ Warning: rmprocs: process 1 not removed
+└ @ Distributed /buildworker/worker/package_linux64/build/usr/share/julia/stdlib/v1.5/Distributed/src/cluster.jl:1030

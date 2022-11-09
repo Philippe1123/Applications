@@ -8,11 +8,11 @@ using DelimitedFiles
 
 function Run()
 #data_dir = string("/home/philippe/.julia/dev/DigitalNets/Example")
-data_dir = string("/home/philippe/Desktop/RunFiles/Results_UNCECOMP/nu2")
-filepath = joinpath(data_dir,"Slope QMC_Het_High_01-03-2021-T:09:32:22")
-filepath_2 = string(filepath,"/Slope QMC_Het_High_01-03-2021-T:09:32:22.jld2")
+data_dir = string("/home/philippe/.julia/dev/DigitalNets/Example/Diffusion/Test")
+#filepath = joinpath(data_dir,"Slope QMC_Het_High_01-03-2021-T:09:32:22")
+filepath_2 = string(data_dir,"/test.jld2")
 history=load(filepath_2,"history")
-report(history,filepath,include_preamble=true)
+report(history,data_dir,include_preamble=true)
 #println("Complete")
 
 

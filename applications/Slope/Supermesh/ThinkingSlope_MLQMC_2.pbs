@@ -1,0 +1,13 @@
+#!/bin/bash -l
+#PBS -l walltime=100:00:00
+#PBS -l nodes=1:ppn=36:cascadelake
+#PBS -l pmem=5gb
+#PBS -N MLMC_2
+#PBS -A lp_uncertainty_quantification
+
+
+module purge
+module load matlab/R2019a
+cd julia-1.5.0/bin/
+./julia /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/Run_Slope_Stability_MLMC_2.jl 2>&1 | tee /vsc-hard-mounts/leuven-user/330/vsc33032/RunReports/Slope_hpc_23062021_MLQMC_2.txt
+

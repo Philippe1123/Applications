@@ -4,12 +4,12 @@
 using   GaussianRandomFields,Revise, DelimitedFiles
 
 p=2
-nterms=400
+nterms=586
 nq=Int64(ceil(sqrt(3*nterms)))
 #exp_field = GaussianRandomFields.Exponential(0.3,σ=1,p=p)
 
 #cov = CovarianceFunction(2,exp_field)
-exp_field = GaussianRandomFields.Matern(0.3,2.0,σ=1,p=p)
+exp_field = GaussianRandomFields.Matern(0.3,0.6,σ=1,p=p)
 #exp_field = GaussianRandomFields.Exponential(1.0,σ=1,p=p)
 
 cov = CovarianceFunction(2,exp_field)

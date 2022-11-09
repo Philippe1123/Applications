@@ -232,9 +232,9 @@ end
 
 
 nterms=400
+pt=LatticeRule(nterms)
 #pt=LatticeRule(nterms)
-#pt=LatticeRule(nterms)
-pt=DigitalNet64(nterms)
+#pt=DigitalNet64(nterms)
 init_Beam_MC_L_Het_Single=Coupling_Slope.init_Slope(ML(),true,false,false,true,true,startlevel=0,max_level=6,MatlabSampler,folder,folder_with_elements,false,numberoftol=34,nb_of_warm_up_samples=2,nshifts=10,nterms=nterms,correlateOnlyDiffs=true,corr_len=1.5,smoothness=2.0,point_generator=pt)
 estimator=init_Beam_MC_L_Het_Single
 #println(Int64.(estimator.internals.sample_method_internals.generators[1][1].lattice_rule.z))

@@ -1,0 +1,22 @@
+Procs added
+24
+ishigherorderRef true
+number Of TOlerances 34
+Max number of levels 6
+Base.Iterators.Filter{MultilevelEstimators.var"#5#6"{Int64},CartesianIndices{1,Tuple{UnitRange{Int64}}}}(MultilevelEstimators.var"#5#6"{Int64}(6), Level[0, 1, 2, 3, 4, 5, 6, 7])
+ElementRefinement false
+isHigerOrderRefinement true
+ERROR: LoadError: SystemError: opening file "/vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/data/Mesh/Slope/p_refinement/GaussPoints_L_0_SUPERMESH.txt": No such file or directory
+Stacktrace:
+ [1] systemerror(::String, ::Int32; extrainfo::Nothing) at ./error.jl:168
+ [2] #systemerror#48 at ./error.jl:167 [inlined]
+ [3] systemerror at ./error.jl:167 [inlined]
+ [4] open(::String; lock::Bool, read::Nothing, write::Nothing, create::Nothing, truncate::Nothing, append::Nothing) at ./iostream.jl:284
+ [5] open at ./iostream.jl:273 [inlined]
+ [6] init_Slope(::ML{1}, ::Bool, ::Bool, ::Bool, ::Bool, ::Bool, ::typeof(MatlabSampler), ::String, ::String, ::Bool; corr_len::Float64, smoothness::Float64, nterms::Int64, max_level::Int64, nshifts::Int64, nb_of_warm_up_samples::Int64, continuate::Bool, numberoftol::Int64, NQoI::Int64, correlateOnlyDiffs::Bool, point_generator::LatticeRule32{400}, Supermesh::Bool, kwargs::Base.Iterators.Pairs{Symbol,Int64,Tuple{Symbol},NamedTuple{(:startlevel,),Tuple{Int64}}}) at /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/Coupling_Slope_Supermesh.jl:188
+ [7] top-level scope at /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/Run_Slope_Stability_Supermesh.jl:238
+ [8] include(::Function, ::Module, ::String) at ./Base.jl:380
+ [9] include(::Module, ::String) at ./Base.jl:368
+ [10] exec_options(::Base.JLOptions) at ./client.jl:296
+ [11] _start() at ./client.jl:506
+in expression starting at /vsc-hard-mounts/leuven-user/330/vsc33032/.julia/dev/MultilevelEstimators/applications/SPDE/Run_Slope_Stability_Supermesh.jl:238

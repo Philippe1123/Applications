@@ -6,19 +6,19 @@ using FileIO
 using PyPlot
 
 function Run()
-#data_dir = string("/home/philippe/.julia/dev/DigitalNets/Example")
-data_dir = string("/home/philippe/Desktop/RunFiles/Results_UNCECOMP/nu2")
-filepath = joinpath(data_dir,"Slope QMC_Het_High_01-03-2021-T:09:32:22")
-filepath_2 = string(filepath,"/Slope QMC_Het_High_01-03-2021-T:09:32:22.jld2")
+
+    
+data_dir = string("/home/philippe/Desktop/RunFiles/thesis/p-ref/beam/mlqmc/pointbased/set3/")
+#data_dir = string("/home/philippe/Desktop/RunFiles/YoungEccomas/")
+filepath = joinpath(data_dir,"Beam MLQMC_Het_Lin_High_GP29-03-2022-T:20:35:35")
+filepath_2 = string(filepath,"/Beam MLQMC_Het_Lin_High_GP29-03-2022-T:20:35:35.jld2")
 history=load(filepath_2,"history")
 report(history,filepath,include_preamble=true)
 #println("Complete")
 
-
 num=1
 num2=num+1
 num3=num2+1
-
 
 figure()
 figure()
